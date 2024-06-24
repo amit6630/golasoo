@@ -78,7 +78,7 @@
       "enabled": true
     },
     "favicon": false,
-    "mbrsiteDomain": "vbehdq7t4m",
+    "mbrsiteDomain": "co46cq5dk2",
     "usedWebp": false,
     "cssOptimize": false,
     "lazyLoad": false,
@@ -92,7 +92,8 @@
     "PWA": {
       "enabled": false
     },
-    "publishEditFolder": false
+    "publishEditFolder": false,
+    "google-analytics": "<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-YJEY9NZLKS\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-YJEY9NZLKS');\n</script>"
   },
   "pages": {
     "index.html": {
@@ -1746,7 +1747,7 @@
         }
       ]
     },
-    "page1.html": {
+    "gollasso.html": {
       "settings": {
         "title": "השירותים שלנו",
         "order": "1",
