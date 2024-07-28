@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "gollasso.html",
     "theme": {
       "name": "gumm5",
       "title": "GymM5",
@@ -78,14 +78,14 @@
       "enabled": true
     },
     "favicon": false,
-    "mbrsiteDomain": "co46cq5dk2",
+    "mbrsiteDomain": "ofgnrltvqm",
     "usedWebp": false,
     "cssOptimize": false,
     "lazyLoad": false,
     "robotsSwitcher": false,
-    "sitemapSwitcher": false,
-    "sitemapSwitcherAuto": false,
-    "siteUrl": false,
+    "sitemapSwitcher": true,
+    "sitemapSwitcherAuto": "on",
+    "siteUrl": "https://gollasso.com/",
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
@@ -1749,7 +1749,7 @@
     },
     "gollasso.html": {
       "settings": {
-        "title": "השירותים שלנו",
+        "title": "השירותים שלנו גולאסו",
         "order": "1",
         "meta_descr": "",
         "meta_image": "@PROJECT_PATH@/assets/images/-whatsapp-2024-04-18-11.13.13-0d45a548-96x106.jpg"
