@@ -12,15 +12,15 @@
         "warningColor": "#00184d",
         "dangerColor": "#00aaff",
         "mainFont": "Roboto Condensed",
-        "display1Font": "Assistant",
+        "display1Font": "Heebo-Medium",
         "display1Size": "8.2",
-        "display2Font": "Assistant",
+        "display2Font": "Heebo-Bold",
         "display2Size": 6,
-        "display5Font": "Assistant",
+        "display5Font": "Heebo-Medium",
         "display5Size": 3,
-        "display7Font": "Assistant",
+        "display7Font": "Heebo-Medium",
         "display7Size": 1.5,
-        "display4Font": "Assistant",
+        "display4Font": "Heebo-Medium",
         "display4Size": 1.3,
         "isRoundedImages": true,
         "isRoundedButtons": true,
@@ -34,13 +34,13 @@
       "nameSelectPreset": "football-club",
       "presetSourceTheme": "gumm5",
       "additionalSetColors": [
+        "#e9e9e9",
         "#555555",
         "#00aaff",
         "#00184d",
         "#06182d",
         "#ffecea",
-        "#4f87fb",
-        "#00d0f3"
+        "#4f87fb"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -51,10 +51,22 @@
         "css": "'Assistant', sans-serif",
         "name": "Assistant",
         "url": "https://fonts.googleapis.com/css?family=Assistant:200,300,400,500,600,700,800"
+      },
+      {
+        "css": "'Heebo-Medium'",
+        "name": "Heebo-Medium",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/Heebo-Medium/font.ttf"
+      },
+      {
+        "css": "'Heebo-Bold'",
+        "name": "Heebo-Bold",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/Heebo-Bold/font.ttf"
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 104,
+    "uniqCompNum": 107,
     "versionPublish": "6.0.1",
     "screenshot": "screenshot.png",
     "publishChangesOnly": false,
@@ -602,27 +614,95 @@
         {
           "alias": false,
           "_styles": {
+            "overflow": "hidden",
             "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+              "padding-top": "(@paddingTop * 5px)",
+              "padding-bottom": "(@paddingBottom * 5px)"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row": {
+              "overflow": "hidden",
+              "z-index": "2",
+              "position": "relative",
+              "-webkit-box-pack": "center",
+              "justify-content": "center",
+              "pointer-events": "none",
+              "direction": "rtl"
+            },
+            ".content": {
+              "margin": "0 auto",
+              "pointer-events": "all",
+              "text-align": "center",
+              "padding-top": "1.5rem",
+              "padding-bottom": "3rem",
+              "@media (min-width: 767px)": {
+                "padding-top": "3rem",
+                "padding-bottom": "5rem"
+              }
+            },
+            ".container": {
+              "max-width": "1600px"
+            },
+            ".mbr-bold, b": {
+              "font-weight": "900"
+            },
+            ".btn": {
+              "color": "white !important",
+              "min-width": "180px",
+              "margin": "0 auto"
+            },
+            ".mbr-text": {
+              "line-height": "1.4",
+              "display": "inline-block",
+              "text-align": "center",
+              "max-width": "700px",
+              "margin-bottom": "1rem !important"
+            },
+            "svg": {
+              "position": "absolute",
+              "bottom": "-25%",
+              "left": "50%",
+              "right": "50%",
+              "-webkit-transform": "translateX(-50%) scaleY(0.8)",
+              "transform": "translateX(-50%) scaleY(0.8)",
+              "z-index": "1",
+              "path": {
+                "fill": "@svg"
+              }
+            },
+            "@media (max-width: 1200px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-50%) scaleY(0.8) scaleX(1.8)",
+                "transform": "translateX(-50%) scaleY(0.8) scaleX(1.8)"
+              }
+            },
+            "@media (max-width: 992px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-50%) scaleY(0.8) scaleX(2.2)",
+                "transform": "translateX(-50%) scaleY(0.8) scaleX(2.2)"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-80%) scaleY(0.8) scaleX(5)",
+                "transform": "translateX(-80%) scaleY(0.8) scaleX(5)"
+              },
+              ".mbr-overlay": {
+                "opacity": "0.4 !important"
+              },
+              ".content": {
+                "padding-top": "1rem",
+                "padding-bottom": "4rem"
+              }
+            },
             ".mbr-fallback-image.disabled": {
               "display": "none"
             },
-            ".container-fluid, .container": {
-              "margin-top": "-400px",
-              "padding": "0 3rem",
-              "@media (max-width: 767px)": {
-                "padding": "0 1.5rem"
-              }
-            },
-            "overflow": "hidden",
             ".mbr-fallback-image": {
               "display": "block",
               "background-size": "cover",
@@ -634,76 +714,13 @@
               "& when (@bg-type = 'video')": {
                 "background-image": "url(@fallBackImage)"
               }
-            },
-            "a": {
-              "font-weight": "bold"
-            },
-            ".image-wrapper": {
-              "transform": "translateY(400px)",
-              "padding": "0 2rem",
-              "img": {
-                "border-radius": "4rem !important",
-                "height": "800px",
-                "object-fit": "cover",
-                "@media (max-width: 767px)": {
-                  "height": "400px",
-                  "border-radius": "2rem !important"
-                }
-              },
-              "@media (max-width: 767px)": {
-                "padding": "0",
-                "transform": "translateY(320px)"
-              }
-            },
-            ".row": {
-              "justify-content": "center",
-              "background": "linear-gradient(to top, #00184d, #00aaff)",
-              "border-radius": "4rem",
-              "padding": "2rem",
-              "padding-top": "450px !important",
-              "@media (min-width: 992px)": {
-                "padding": "4rem"
-              },
-              "@media (max-width: 767px)": {
-                "padding": "1.5rem 0rem",
-                "border-radius": "2rem",
-                "padding-top": "330px !important"
-              }
-            },
-            "@media (max-width: 1400px)": {
-              ".col-lg-12": {
-                "flex": "0 0 auto",
-                "width": "100%"
-              }
-            },
-            ".mbr-section-btn, .btn": {
-              "width": "100%"
-            },
-            "@media (max-width: 991px)": {
-              ".image-wrapper": {
-                "margin-bottom": "1rem"
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#ffffff"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#ffffff",
-              "text-align": "center"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#ffffff"
-            },
-            ".mbr-section-subtitle2": {
-              "color": "#ffffff",
-              "text-align": "center"
             }
           },
           "_name": "header3",
-          "_sourceTheme": "gymm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gymm5 header3\" group=\"Header\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"1\" max=\"10\" step=\"1\" value=\"7\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"1\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Price\" name=\"showTitle2\">\n        <input type=\"checkbox\" title=\"Subtitle 1\" name=\"showsubTitle\">\n        <input type=\"checkbox\" title=\"Subtitle 2\" name=\"showsubTitle2\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/gymm5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/gymm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\n        <div class=\"image-wrapper\">\n            <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/1-picsart-aiimageenhancer.jpg-2158x1324.jpg\" alt=\"גולאסו בית ספר לכדורגל\">\n        </div>\n\n        <div class=\"row\">\n\n            <div class=\"col-12 col-md-12 col-lg-12 col-xl-5\">\n\n\n\n\n                <div class=\"align-left\">\n                    <h3 class=\"mbr-section-subtitle2 mbr-fonts-style mb-2\" data-app-selector=\".mbr-section-subtitle2\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle2\"><b>ברוכים הבאים לגולאסו</b></h3>\n                    <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">!!בית הספר לכדורגל המוביל בדרום<br>         שחורט על דגלו<br>יחס אישי והעצמת הילד⚽<br>משמעת וערכים⚽<br>לימוד יסודות וטכניקות משחק⚽<br>הפעלות ימי הולדת כדורגל והפעלות ספורט לבנים ולבנות⚽ <br>הפעלות ספורט לאירועים מסיבות סיום מגבשות&nbsp;וספורטיבית⚽</p>\n\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div mbr-buttons mbr-theme-style=\"display-5\" class=\"mbr-section-btn align-left mt-5\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"index.html#form01-15\" data-app-placeholder=\"Type Text\">תשאירו פרטים</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "tJ2HYuyOIb",
-          "_anchor": "header3-2",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section data-bs-version=\"5.1\" group=\"Headers\" class=\"header3 petsm4_header3\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n\t\t<header>Background</header>\n\t\t<input type=\"color\" title=\"Bottom Color\" name=\"svg\" value=\"#ffffff\">\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/2.jpg-1079x667.jpg\" selected>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#7aba59\">\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/petsm4/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#181818\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\t\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" preserveAspectRatio=\"none\" viewBox=\"0 0 858 235\">\n\t\t<rect id=\"backgroundrect\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" fill=\"transparent\" stroke=\"none\"></rect>\n\t\t<g class=\"currentLayer\">\n\t\t\t<title>Layer 1</title>\n\t\t\t<path fill=\"#4a90d6\" fill-opacity=\"1\" stroke=\"none\" stroke-width=\"2\" stroke-dasharray=\"none\" stroke-linejoin=\"round\" stroke-linecap=\"butt\" stroke-dashoffset fill-rule=\"nonzero\" opacity=\"1\" d=\"M13.91718,157.55035C128.42169,209.00593 174.16977,66.43387 406.36266,148.04844C638.55554,229.66302 649.93992,110.39426 837.69295,145.53147C1025.44597,180.66868 893.71138,356.73312 396.9054,368.57034C-99.90058,380.40757 -100.58733,106.09477 13.91718,157.55035z\" id=\"svg_1\"></path>\n\t\t</g>\n\t</svg>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-12 col-md-10 col-lg-8 content align-center\">\n\t\t\t\t<h1 class=\"mbr-section-title align-center mbr-white mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n\t\t\t\t\tברוכים הבאים לגולאסו\n\t\t\t\t</h1>\n\t\t\t\t\n\t\t\t\t<p class=\"mbr-text pb-2 mbr-white mbr-semibold align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n\t\t\t\t\tבית הספר לכדורגל המוביל בדרום!!\n\t\t\t\t\t<br>⚽ יחס אישי והעצמת הילד\n\t\t\t\t\t<br>⚽ משמעת וערכים\n\t\t\t\t\t<br>⚽ לימוד יסודות וטכניקות משחק\n\t\t\t\t\t<br>⚽ הפעלות ימי הולדת כדורגל והפעלות ספורט לבנים ולבנות\n\t\t\t\t\t<br>⚽ הפעלות ספורט לאירועים, מסיבות סיום מגבשות וספורטיביות\n\t\t\t\t</p>\n\t\t\t\t\n\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"align-center mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n\t\t\t\t\t<a class=\"btn btn-md btn-primary\" href=\"index.html#form1-2o\" data-app-placeholder=\"Type Text\">תשאירו פרטים</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "vnljwnrhgp",
+          "_anchor": "header3-2y",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
@@ -714,7 +731,7 @@
         {
           "_name": "features04",
           "_sourceTheme": "nichem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features4\" group=\"Features\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <select title=\"Columns\" name=\"cardsWidth\">\n            <option value=\"12\">1</option>\n            <option value=\"6\">2</option>\n            <option value=\"4\">3</option>\n            <option value=\"3\" selected>4</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <header>Cards Configuration</header>\n        <input type=\"range\" name=\"imageHeight\" title=\"Image Height\" min=\"2\" max=\"6\" step=\"1\" value=\"4\">\n        <input type=\"color\" name=\"subline\" title=\"Accent Color\" value=\"#00aaff\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/nichem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#fafafa\" condition=\"overlay\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle\">\n            <!-- כותרת משופרת לפי הבקשה שלך -->\n            <h4 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-5\">\n                <b>כל מה שהילד שלכם צריך במקום אחד</b>\n            </h4>\n        </div>\n\n        <div class=\"row justify-content-center mt-4\">\n            <!-- Card 1 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-whatsapp-2024-04-18-21.09.43-5682ac56-522x390.jpg\" data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>בית הספר לכדורגל</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            <b>הילד חולם להיות כדורגלן?</b> נהנה ממשחק המשלב כיף ולמידה משמעותית? בית הספר גולאסו מזמין אתכם לעונה גדושה בהצלחות.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a href=\"page1.html#slider01-2j\" class=\"btn btn-warning\">לפרטים והרשמה</a>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Card 2 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-2-596x795.jpg\" data-slide-to=\"1\" data-bs-slide-to=\"1\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>ימי הולדת כדורגל</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            🎉 חוגגים יום הולדת בגולאסו! חוויה מדהימה של ספורט, אנרגיה והנאה בלתי נשכחת לילדכם ולכל החברים שלו.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\"><a href=\"page1.html#slider01-2k\" class=\"btn btn-warning\" data-app-placeholder=\"Type Text\">שריינו תאריך</a></div>\n                </div>\n            </div>\n\n            <!-- Card 3 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-whatsapp-2024-05-24-07.31.30-ff5efa37-596x398.jpg\" data-slide-to=\"2\" data-bs-slide-to=\"2\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>אימונים אישיים</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            אימון מנטלי ומקצועי בדגש על <b>שיפור אישי</b>, קואורדינציה, ושליטה בכדור. העצמת הילד וליווי מקצועי צמוד לכל אורך הדרך.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a href=\"page1.html#slider01-2l\" class=\"btn btn-warning\">לתיאום אימון</a>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Card 4 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2026-06-14-at-2.52.57-pm.jpeg-1080x1350.jpeg\" data-slide-to=\"5\" data-bs-slide-to=\"5\" alt>\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>מחנה קיץ הגדול</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            הירשמו למחנה הקיץ המקצועי ביותר! אימונים איכותיים, כיף ללא הפסקה ומחיר ללא תחרות. אל תפספסו!\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\"><a href=\"index.html#form1-2o\" class=\"btn btn-warning\" data-app-placeholder=\"Type Text\">להרשמה למחנה</a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features4\" group=\"Features\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <select title=\"Columns\" name=\"cardsWidth\">\n            <option value=\"12\">1</option>\n            <option value=\"6\">2</option>\n            <option value=\"4\">3</option>\n            <option value=\"3\" selected>4</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <header>Cards Configuration</header>\n        <input type=\"range\" name=\"imageHeight\" title=\"Image Height\" min=\"2\" max=\"6\" step=\"1\" value=\"4\">\n        <input type=\"color\" name=\"subline\" title=\"Accent Color\" value=\"#00aaff\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/nichem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#fafafa\" condition=\"overlay\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle\">\n            <!-- כותרת משופרת לפי הבקשה שלך -->\n            <h4 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-5\">\n                <b>כל מה שהילד שלכם צריך במקום אחד</b>\n            </h4>\n        </div>\n\n        <div class=\"row justify-content-center mt-4\">\n            <!-- Card 1 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-whatsapp-2024-04-18-21.09.43-5682ac56-522x390.jpg\" data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>בית הספר לכדורגל</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            <b>הילד חולם להיות כדורגלן?</b> נהנה ממשחק המשלב כיף ולמידה משמעותית? בית הספר גולאסו מזמין אתכם לעונה גדושה בהצלחות.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a href=\"page1.html#slider01-2j\" class=\"btn btn-warning\">לפרטים והרשמה</a>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Card 2 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-2-596x795.jpg\" data-slide-to=\"1\" data-bs-slide-to=\"1\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>ימי הולדת כדורגל</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            🎉 חוגגים יום הולדת בגולאסו! חוויה מדהימה של ספורט, אנרגיה והנאה בלתי נשכחת לילדכם ולכל החברים שלו.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\"><a href=\"page1.html#slider01-2k\" class=\"btn btn-warning\" data-app-placeholder=\"Type Text\">שריינו תאריך</a></div>\n                </div>\n            </div>\n\n            <!-- Card 3 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-whatsapp-2024-05-24-07.31.30-ff5efa37-596x398.jpg\" data-slide-to=\"2\" data-bs-slide-to=\"2\">\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>אימונים אישיים</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            אימון מנטלי ומקצועי בדגש על <b>שיפור אישי</b>, קואורדינציה, ושליטה בכדור. העצמת הילד וליווי מקצועי צמוד לכל אורך הדרך.\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a href=\"page1.html#slider01-2l\" class=\"btn btn-warning\">לתיאום אימון</a>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Card 4 -->\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2026-06-14-at-2.52.57-pm.jpeg-1080x1350.jpeg\" data-slide-to=\"5\" data-bs-slide-to=\"5\" alt>\n                    </div>\n                    <div class=\"item-content\">\n                        <h6 class=\"item-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\"><b>מחנה קיץ הגדול</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                            הירשמו למחנה הקיץ המקצועי ביותר! אימונים איכותיים, כיף ללא הפסקה ומחיר ללא תחרות. אל תפספסו!\n                        </p>\n                    </div>\n                    <div class=\"item-footer\" mbr-buttons mbr-theme-style=\"display-4\"><a href=\"index.html#form1-2o\" class=\"btn btn-warning\" data-app-placeholder=\"Type Text\">להרשמה למחנה</a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_styles": {
             "padding-top": "(@paddingTop * 1.5rem)",
             "padding-bottom": "(@paddingBottom * 1.5rem)",
