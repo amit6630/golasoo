@@ -1,8 +1,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://gollasso.com/index.html</loc>
+		<loc>https://gollasso.com/</loc>
 	</url>
 	<url>
-		<loc>https://gollasso.com/gollasso.html</loc>
+		<loc>https://gollasso.com/services.html</loc>
+	</url>
+	<url>
+		<loc>https://gollasso.com/privacy.html</loc>
+	</url>
+	<url>
+		<loc>https://gollasso.com/terms.html</loc>
+	</url>
+	<url>
+		<loc>https://gollasso.com/accessibility.html</loc>
 	</url>
 </urlset>
