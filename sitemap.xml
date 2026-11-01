@@ -1,9 +1,103 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://gollasso.com/</loc>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-class-beer-sheva.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-school-beer-sheva-group.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-birthday-party-beer-sheva.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-training-shot.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-sports-activity-football-darts.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-summer-camp-beer-sheva.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-coach-dribbling-drill.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-training-kids.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-birthday-agility-ladder.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-event-red-team.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-team-building-sack-race.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-coach-dribbling.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-school-kids-on-pitch.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-sports-activity-giant-ball.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-training-cones.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-practice-pitch.webp</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://gollasso.com/services.html</loc>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-school-beer-sheva-group.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-birthday-party-beer-sheva.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-training-kids.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-school-kids-on-pitch.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-training-cones.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-coach-with-kids.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-birthday-agility-ladder.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-event-red-team.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-training-shot.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/private-football-coach-dribbling.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-sports-activity-football-darts.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-team-building-sack-race.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-sports-activity-giant-ball.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/football-summer-camp-beer-sheva.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://gollasso.com/assets/images/kids-football-class-beer-sheva.webp</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://gollasso.com/privacy.html</loc>
